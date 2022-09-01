@@ -1,0 +1,78 @@
+{
+  "extends": [
+    "airbnb",
+    "react-app"
+  ],
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "parser": "@babel/eslint-parser",
+  "rules": { 
+    "object-curly-spacing": [
+      "warn",
+      "always"
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "vars": "all",
+        "args": "none"
+      }
+    ],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "max-len": [
+      "warn",
+      {
+        "code": 150,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreComments": true
+      }
+    ],
+    "no-plusplus": [
+      "error",
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        "disallowPrototype": true,
+        "singleReturnOnly": false,
+        "classPropertiesAllowed": false
+      }
+    ],
+    "prefer-arrow-callback": [
+      "error",
+      { "allowNamedFunctions": true }
+    ],
+    "func-style": [
+      "error",
+      "expression",
+      { "allowArrowFunctions": true }
+    ],
+    "react/jsx-key": "error",
+    "function-paren-newline": "off",
+    "@typescript-eslint/default-param-last":"off",
+    "react-hooks/exhaustive-deps": "off",
+    "@typescript-eslint/no-shadow":"off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-boolean-value": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "react/jsx-wrap-multilines": "off",
+    "react/destructuring-assignment": "off"
+  }
+}

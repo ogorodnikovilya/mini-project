@@ -1,0 +1,15 @@
+.main-box {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+
+  &__button {
+    align-self: flex-start
+  }
+
+  &__jokes-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap
+  }
+}

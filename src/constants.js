@@ -1,0 +1,16 @@
+const JOKE_URL = 'https://api.chucknorris.io/jokes/random';
+
+const LOAD_JOKE = 'LOAD_JOKE';
+const GET_JOKE_LOADING = 'GET_JOKE_LOADING';
+const GET_JOKE_SUCCESS = 'GET_JOKE_SUCCESS';
+const GET_JOKE_ERROR = 'GET_JOKE_ERROR';
+const CLEAR_JOKE_ERROR = 'CLEAR_JOKE_ERROR';
+
+export {
+  JOKE_URL,
+  LOAD_JOKE,
+  GET_JOKE_LOADING,
+  GET_JOKE_SUCCESS,
+  GET_JOKE_ERROR,
+  CLEAR_JOKE_ERROR,
+};
