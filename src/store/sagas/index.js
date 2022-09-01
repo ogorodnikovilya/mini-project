@@ -2,13 +2,13 @@ import {
   takeEvery,
   put,
   call,
-  fork,
+  fork
 } from 'redux-saga/effects';
 import { getJoke } from '../../services/joke-service';
 import {
   getJokeError,
   getJokeLoading,
-  getJokeSuccess,
+  getJokeSuccess
 } from '../reducers/joke';
 
 const getNewJoke = async () => {
@@ -17,7 +17,7 @@ const getNewJoke = async () => {
     return response.data;
   } catch (error) {
     throw error;
-  }
+  };
 };
 
 function* workerFetchJokeSaga() {
@@ -31,20 +31,20 @@ function* workerFetchJokeSaga() {
     jokesInLocalStorage.push(oneJoke);
     localStorage.setItem('jokes', JSON.stringify(jokesInLocalStorage));
   } catch (error) {
-    yield put(getJokeError('Ошибка в получении данных'));
-  }
-}
+    yield put(getJokeError('Ошибка в получении данных'))
+  };
+};
 
 function* watchFetchJokeSaga() {
   yield takeEvery('LOAD_JOKE', workerFetchJokeSaga);
-}
+};
 
 function* rootSaga() {
   yield fork(watchFetchJokeSaga);
-}
+};
 
 export {
   workerFetchJokeSaga,
   watchFetchJokeSaga,
-  rootSaga,
+  rootSaga
 };

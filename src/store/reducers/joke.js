@@ -3,13 +3,13 @@ import {
   CLEAR_JOKE_ERROR,
   GET_JOKE_ERROR,
   GET_JOKE_LOADING,
-  GET_JOKE_SUCCESS,
+  GET_JOKE_SUCCESS
 } from '../../constants';
 
 const initialState = {
   jokes: JSON.parse(localStorage.getItem('jokes')) || [],
   isLoading: false,
-  error: null,
+  error: null
 };
 
 const jokeReducer = (state = initialState, action) => {
@@ -21,8 +21,8 @@ const jokeReducer = (state = initialState, action) => {
     case GET_JOKE_ERROR:
       return { ...state, error: action.payload, isLoading: false };
     case CLEAR_JOKE_ERROR:
-      return { ...state, error: null };
-  }
+      return { ...state, error: null }
+  };
   return state;
 };
 
@@ -38,5 +38,5 @@ export {
   getJokeSuccess,
   getJokeError,
   clearJokeError,
-  loadJoke,
+  loadJoke
 };

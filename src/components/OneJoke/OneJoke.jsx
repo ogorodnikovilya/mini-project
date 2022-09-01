@@ -1,12 +1,12 @@
 import { Card } from 'react-bootstrap';
-import './style.scss';
+import './style.scss'
 
-function OneKid({ text }) {
-  return <Card className="joke-card">
+const OneKid = ({ text }) => (
+  <Card className="joke-card">
     <Card.Text>
       {text}
     </Card.Text>
-  </Card>;
-}
+  </Card>
+)
 
-export default OneKid;
+export default OneKid

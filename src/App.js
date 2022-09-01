@@ -1,8 +1,8 @@
 import { Main } from './components';
 import './app.scss';
 
-function App() {
-  return <Main />;
-}
+const App = () => (
+  <Main />
+)
 
-export default App;
+export default App

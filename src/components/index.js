@@ -7,5 +7,5 @@ export {
   Main,
   OneJoke,
   ButtonAdd,
-  AlertMessage,
+  AlertMessage
 };

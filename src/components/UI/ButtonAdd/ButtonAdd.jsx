@@ -3,9 +3,9 @@ import { Button } from 'react-bootstrap';
 import { loadJoke } from '../../../store/reducers/joke';
 import './style.scss';
 
-function ButtonAdd() {
+const ButtonAdd = () => {
   const dispatch = useDispatch();
-  const { isLoading } = useSelector((state) => state.joke);
+  const { isLoading } = useSelector(state => state.joke);
 
   return (
     <Button
@@ -16,7 +16,7 @@ function ButtonAdd() {
     >
       MORE!!!
     </Button>
-  );
+  )
 }
 
-export default ButtonAdd;
+export default ButtonAdd
